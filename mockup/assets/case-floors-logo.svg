@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Faithful vector recreation of the CASE Floors "CF" mark (coral tile, cream house+flag, CF
+     monogram). Stand-in for the official PNG — swap in the real asset when building in Beehiiv. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 120 120" role="img" aria-label="CASE Floors logo">
+  <rect width="120" height="120" rx="24" fill="#E1755B"/>
+  <polygon points="20,55 20,45 58,20 84,37 84,28 92,28 92,42 96,45 96,55" fill="#F0EAD6"/>
+  <polygon points="92,29 105,33 92,37.5" fill="#F0EAD6"/>
+  <text x="60" y="100" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="50" letter-spacing="-2" fill="#F0EAD6">CF</text>
+</svg>
