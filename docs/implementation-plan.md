@@ -13,7 +13,8 @@ decision in §5). Companion docs: `data-sources.md` (where the market numbers co
 
 ## 1. Audience pipeline — QuickBooks → Beehiiv
 
-Goal: get Eric's ~100 customers (name, email, phone, and any purchase history) into Beehiiv, cleanly.
+Goal: get Eric's **~380 customers** (and growing toward 500+ as he adds networking/business-card
+contacts) — name, email, phone, and any purchase history — into Beehiiv, cleanly.
 Beehiiv has **no native QuickBooks integration**, so this is a CSV import (with an optional automated
 path via Zapier).
 
@@ -93,7 +94,7 @@ flooring decision.
    schedule the date, done.
 3. **Prospect cadence → a Beehiiv Automation** so the lighter issue goes out every 4–6 weeks.
    *(Heads-up: automations/advanced segmentation may sit on a paid Beehiiv tier — confirm current
-   plan limits; the free tier easily covers Eric's ~100-subscriber list for sending.)*
+   plan limits; the free tier easily covers Eric's ~380-subscriber list for sending.)*
 4. **Refreshing the data each issue:** the only real recurring work. Pull the latest numbers from
    `data-sources.md` (NEFAR mid-month, Freddie Mac weekly) and update the six stats + the takeaway.
    ~15 minutes with the AI assist below.
@@ -115,7 +116,7 @@ flooring decision.
 | | **Beehiiv** ✅ chosen | **Mailchimp** (only if Eric opens his own) |
 |---|---|---|
 | QuickBooks sync | No native sync → CSV import (or Zapier) | Native (Intuit-owned) — but needs Eric's *own* account |
-| Free tier | Up to ~2,500 subscribers, unlimited sends (covers ~100 easily) | 500 contacts, ~1,000 sends/mo |
+| Free tier | Up to ~2,500 subscribers, unlimited sends (covers ~380 with room to grow) | 500 contacts, ~1,000 sends/mo |
 | Monetization | **Built-in ad network, Boosts, referral program** — strong fit for Eric's "sponsor slot" idea | Manual |
 | Editor | Clean, newsletter-native | More features, steeper |
 | Automations | Yes (may be paid tier) | Yes |

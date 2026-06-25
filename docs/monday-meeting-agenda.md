@@ -1,8 +1,14 @@
 # Monday Meeting — Agenda & Checklist
 
-**When:** Monday, June 29, 2026 · 2:00 PM (lunch at Alex's)
-**Who:** Alex + Eric Borrelli
+**When:** Rescheduled to **Wednesday next week** (moved from Mon, Jun 29 per the 6/25 call) — confirm exact time.
+**Who:** Alex + Eric Borrelli (Eric may introduce his GC contact — see below).
 **Goal:** show Eric the newsletter, agree on the plan, and collect everything needed to go live.
+
+> **New opportunity from the 6/25 call:** Eric's buddy **"Jane Remodeling Inc"** — a general
+> contractor / flooring installer with **no website**. Alex to do light research and send a
+> **website mockup** (same play as Eric's newsletter), then reach out warmly (Eric referred). Strong
+> fit for a **newsletter sponsor** *and* a new web client. Eric is texting the business card. Build
+> the GC site mockup once the card details are in hand.
 
 ---
 
