@@ -13,13 +13,14 @@
 - Note everything marked **SAMPLE** is a placeholder we swap for his real stuff.
 
 ## 2. Walk the plan (10 min)
-- **Contacts:** QuickBooks → Mailchimp (auto-sync if QuickBooks Online; clean CSV import otherwise).
+- **Contacts:** QuickBooks → Beehiiv (export & clean the CSV → import; optional Zapier auto-sync later).
 - **Segments:** Active Buyers (quarterly) vs. Investor Prospects (every 4–6 weeks) vs. Contractors.
 - **Why that cadence:** catches investors in the ~1-month gap between buying a house and buying floor.
 - **Automation:** template once, schedule the quarterly send, automate the prospect cadence; ~15 min
   per issue to refresh the market data (AI helps).
-- **Platform:** recommend Mailchimp (free tier covers him, syncs with QuickBooks); Beehiiv if he later
-  wants the built-in sponsor/referral tools.
+- **Platform:** Beehiiv (free tier covers his list; built-in sponsor/referral tools fit the sponsor-slot
+  idea). Alex's Mailchimp stays reserved for his other business — Eric opens his own only if he ever
+  specifically wants Mailchimp.
 
 ## 3. Collect from Eric (the important part) ✅
 - [ ] **Logo file** (PNG + vector/SVG if he has it)
@@ -28,24 +29,24 @@
 - [ ] **The two flip-line designs** (for the $1.49 special)
 - [ ] **Physical business address** + hours (address required in email footer)
 - [ ] **Phone** + preferred booking method (call/text/reply)
-- [ ] **Which QuickBooks** — Online or Desktop? (determines sync vs. CSV)
+- [ ] **Which QuickBooks** — Online or Desktop? (affects export method + whether Zapier auto-sync is possible)
 - [ ] **QuickBooks access / a customer export** to import contacts
 - [ ] Confirm **pricing**: $1.49 flip · $1.69 repeat · $1.79 list
 - [ ] **Social handles** ("Case Floors" FB/IG) for the footer
 - [ ] Website URL (he was going to send it)
 
 ## 4. Decisions to lock 🔒
-- [ ] Platform: **Mailchimp** (confirm)
+- [ ] Platform: **Beehiiv** (confirm; Mailchimp reserved for Alex's other business)
 - [ ] Cadence per segment (confirm quarterly / 4–6 wks)
 - [ ] **First issue date**
 - [ ] Pursue **sponsors** now or later?
 - [ ] Off-market section: start with proxy metrics / wholesaler partner, or buy a tool (PropStream)?
 
 ## 5. Do it live (if time) ⚙️
-- [ ] Create the Mailchimp account (name, address, from-email = LVPJacksonville@gmail.com)
-- [ ] Connect QuickBooks **or** import the cleaned CSV
+- [ ] **Eric** creates the Beehiiv account (name, address, from-email = LVPJacksonville@gmail.com)
+- [ ] Export QuickBooks customers → import the cleaned CSV into Beehiiv
 - [ ] Apply tags + build the 3 segments
-- [ ] Rebuild the mockup as a Mailchimp template; drop in real logo + photos
+- [ ] Rebuild the mockup as a Beehiiv post/template; drop in real logo + photos
 - [ ] Send a **test issue** to Eric
 - [ ] Schedule issue #1
 

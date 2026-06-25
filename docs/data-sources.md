@@ -50,7 +50,7 @@ public feed of off-MLS deals.** Options, cheapest → most real:
 3. **Partner data.** Eric talks to local wholesalers already — a wholesaler partner could share
    aggregate stats (deal count, price bands) in exchange for a sponsor mention. Cheap and very local.
 
-**v1 decision:** the mockup's off-market block is clearly marked **"Sample · live tracker coming."**
+**v1 decision:** the mockup's off-market block is clearly marked **"Preview · data source TBD."**
 Until a source above is chosen, keep it labeled as a sample. Recommended first step: proxy metrics
 (option 1) + explore a wholesaler partnership (option 3); upgrade to a paid tool only if it pays off.
 

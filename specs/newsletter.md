@@ -62,9 +62,9 @@ beforehand.
 
 ### B. Implementation plan (written, for the Monday meeting)
 
-5. **Audience pipeline:** document how to get contacts from **QuickBooks → Mailchimp**
-   (export/import path and, where possible, an automated/assisted path), including the fields to
-   carry (name, email, phone, purchase history if available).
+5. **Audience pipeline:** document how to get contacts from **QuickBooks → the chosen platform
+   (Beehiiv)** (export/import path and, where possible, an automated/assisted path), including the
+   fields to carry (name, email, phone, purchase history if available).
 6. **Segmentation scheme:** define concrete segments — at minimum **"Active/definite buyers"** vs.
    **"Prospects / not buying now,"** with **real estate investors/flippers** called out — and the
    data signals used to assign people to each.
@@ -72,13 +72,13 @@ beforehand.
    frequent for prospects), with the reasoning, designed around the ~**1-month lag** between an
    investor buying a house and buying flooring.
 8. **Automation plan:** how issues get assembled and sent on a schedule with minimal effort
-   (Mailchimp automations/scheduled campaigns; how the market data gets refreshed each issue),
+   (Beehiiv scheduled posts/automations; how the market data gets refreshed each issue),
    including where AI assists.
 9. **Data-sourcing doc:** list the specific, accessible sources for the Northeast Florida market
    numbers (and an honest assessment of how to get the off-market/wholesale angle), so each issue
    can be refreshed.
-10. **Platform recommendation:** target **Mailchimp**, but document the **Beehiiv** tradeoffs so
-    Eric can make an informed choice (esp. re: built-in sponsorship/referral tooling).
+10. **Platform recommendation:** target **Beehiiv** (the chosen platform), and document **Mailchimp**
+    as the alternative — reserved for Alex's other business unless Eric opens his own account.
 
 ### C. Meeting prep
 
@@ -88,7 +88,7 @@ beforehand.
 
 ### Nice-to-haves (out of scope for v1)
 
-- A live, configured Mailchimp account with Eric's real contacts imported and a scheduled campaign.
+- A live, configured Beehiiv account with Eric's real contacts imported and a scheduled send.
 - An automated agent that finds new leads or tracks inventory (Eric floated both).
 - A real sold sponsorship.
 - Pulling genuine off-MLS/wholesale data feeds (vs. a documented approach + caveat).
@@ -97,10 +97,10 @@ beforehand.
 ## Constraints
 
 - **Platform / environment:** Email newsletter. Mockup is a self-contained HTML file viewable in a
-  browser/phone. Final sends via **Mailchimp**.
+  browser/phone. Final sends via **Beehiiv** (Mailchimp reserved for Alex's other business).
 - **Tech stack:** Email-safe HTML/CSS for the mockup. No build tooling required to open it. Use
-  inline SVG for the logo in the mockup (note: convert to a hosted PNG for real Mailchimp sends,
-  since some clients strip SVG).
+  inline SVG for the logo in the mockup (note: convert to a hosted PNG for real sends, since some
+  clients strip SVG).
 - **Brand rules (non-negotiable):**
   - The **flip/discount line ($1.49/sq ft) must be marketed only under "The LVP Warehouse," never
     the CASE brand** — CASE is unaware Eric runs this side line.
@@ -137,7 +137,7 @@ beforehand.
       marked placeholders.
 - [ ] The $1.49/sq ft flip special appears under The LVP Warehouse brand with **no** CASE reference.
 - [ ] Footer has contact info, address placeholder, and an unsubscribe link.
-- [ ] `docs/implementation-plan.md` covers the QuickBooks→Mailchimp pipeline, segmentation, cadence,
+- [ ] `docs/implementation-plan.md` covers the QuickBooks→Beehiiv pipeline, segmentation, cadence,
       and automation (Requirements 5–8, 10).
 - [ ] `docs/data-sources.md` lists real, citable NE-Florida data sources + the off-market caveat
       (Requirement 9).
@@ -150,13 +150,13 @@ beforehand.
 Alex opens the mockup on his phone at the Monday meeting. Eric sees a clean "LVP Warehouse"-branded
 newsletter leading with real Northeast Florida market numbers, his flooring designs, the $1.49
 investor special, and a sponsor slot. Alex then walks Eric through the plan doc — "we pull your
-QuickBooks contacts into Mailchimp, split them into active buyers vs. investor prospects, and it
+QuickBooks contacts into Beehiiv, split them into active buyers vs. investor prospects, and it
 sends itself quarterly (more often to prospects)." Eric hands over his logo file, brand colors,
 some design photos, and QuickBooks access, and they agree on cadence — everything needed to go live.
 
 ## Open Questions
 
-- Final platform call: Mailchimp vs. Beehiiv (planning for Mailchimp; Beehiiv tradeoffs documented).
+- Platform: **Beehiiv** chosen (Mailchimp reserved for Alex's other business unless Eric opens his own).
 - Can off-MLS / wholesale activity be sourced reliably and affordably for the investor section?
 - Exact send cadence per segment (starting recommendation provided; tune from engagement data).
 - Eric's real brand colors, final business name treatment, physical address, and hours.
