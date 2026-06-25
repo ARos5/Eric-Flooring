@@ -32,27 +32,27 @@ every figure is real and citable.
 
 ---
 
-## The hard part: off-market / wholesale ("off-MLS") activity
+## Off-market / investor activity ("Off-Market Real Estate Trends")
 
-Eric specifically wants the investor/wholesale angle. Honest assessment: **there is no clean, free,
-public feed of off-MLS deals.** Options, cheapest → most real:
+**Solved.** There's no free feed of literal off-MLS *assignment* deals — but the **investor signals
+that matter are publicly trackable on a repeatable cadence**, and Jacksonville is a national hotspot.
+This is the approach (and the exact figures used in the v1 mockup):
 
-1. **Proxy metrics from public/affordable data (recommended for v1).** You can't see assignment
-   deals directly, but you can track signals investors care about:
-   - **Cash-sale share** and **absentee-owner purchases** (ATTOM / county records).
-   - **Foreclosure & auction volume** (ATTOM / RealtyTrac).
-   - **County property-appraiser & clerk records** for Duval, Clay, St. Johns — public but messy;
-     good for cash/quitclaim/assignment patterns with some cleanup.
-   Label these as "investor activity indicators," not literal wholesale counts.
-2. **Investor data tools (paid).** PropStream (~$99/mo), BatchLeads, InvestorLift, DealMachine —
-   distressed/absentee/cash lists and comps. Most direct path to real off-market numbers; costs money.
-   Decide with Eric whether the section is worth a subscription.
-3. **Partner data.** Eric talks to local wholesalers already — a wholesaler partner could share
-   aggregate stats (deal count, price bands) in exchange for a sponsor mention. Cheap and very local.
+| Metric | Figure used | Source · cadence |
+|---|---|---|
+| **All-cash share** | **39.3%** — Jacksonville tied #1 in the U.S. | Redfin (reported via WLRN, Feb 2026) · ~quarterly |
+| **Investor / cash buyers** | **~28%** of transactions (vs. ~18–20% historically) | Redfin / local market analyses · quarterly |
+| **Avg. flip gross margin** | **~27%** metro (Jacksonville) | **ATTOM Home Flipping Report** · quarterly |
+| **Hot flip ZIPs (sub-$200k)** | 32210 (Westside) · 32218/32208 (Northside) · 32206 (Springfield) | local investor-market analyses + county records |
+| **Foreclosure / auction volume** | live Duval auction calendar | **Duval County Clerk** foreclosure auctions (RealAuction) · ongoing |
 
-**v1 decision:** the mockup's off-market block is clearly marked **"Preview · data source TBD."**
-Until a source above is chosen, keep it labeled as a sample. Recommended first step: proxy metrics
-(option 1) + explore a wholesaler partnership (option 3); upgrade to a paid tool only if it pays off.
+**How to refresh each issue:** pull the latest **Redfin** all-cash/investor share, the **ATTOM**
+Home Flipping Report (metro flip rate + ROI), and the **Duval County Clerk** auction calendar; refresh
+hot ZIPs/price bands from local investor analyses + the county property appraiser. All free.
+
+**If Eric wants deeper, real-time data later:** a paid investor tool (**PropStream** ~$99/mo) for
+distressed/absentee/cash lists, or **aggregate stats from a wholesaler partner** (cheap, hyper-local,
+and a natural sponsor tie-in).
 
 ---
 
@@ -60,5 +60,6 @@ Until a source above is chosen, keep it labeled as a sample. Recommended first s
 1. Pull the latest **NEFAR** monthly report → update the 5 housing stats + their YoY/MoM deltas.
 2. Grab this week's **Freddie Mac** 30-yr rate.
 3. Update the "what this means for flippers" line to match the new numbers.
-4. Update the off-market block once a real source is live (until then, leave the sample tag).
+4. Refresh the off-market figures: **Redfin** all-cash/investor share (quarterly), **ATTOM** flip ROI
+   (quarterly), **Duval County Clerk** auction calendar (live).
 5. Re-state the reporting month on the source line.

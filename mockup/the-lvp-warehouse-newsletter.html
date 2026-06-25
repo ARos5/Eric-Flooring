@@ -94,15 +94,15 @@
   .swatch .new{position:absolute;right:8px;top:8px;background:var(--accent);color:#1a1205;
                font-size:10px;font-weight:800;letter-spacing:.5px;padding:3px 7px;border-radius:5px;text-transform:uppercase;}
   /* SWAP: floor photos — these CSS swatches stand in for real product photography */
-  .oak{background:repeating-linear-gradient(90deg,rgba(0,0,0,.07) 0 1px,transparent 1px 70px),
+  .moak{background:repeating-linear-gradient(90deg,rgba(0,0,0,.07) 0 1px,transparent 1px 70px),
        repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 34px),
-       linear-gradient(180deg,#f2d4a4,#dca96f);}
-  .hick{background:repeating-linear-gradient(90deg,rgba(0,0,0,.15) 0 1px,transparent 1px 66px),
-        repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 1px,transparent 1px 34px),
-        linear-gradient(180deg,#8c5c33,#583820);}
-  .ash{background:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 74px),
+       linear-gradient(180deg,#d9b07a,#bf9156);}
+  .sand{background:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,transparent 1px 70px),
+        repeating-linear-gradient(0deg,rgba(0,0,0,.04) 0 1px,transparent 1px 34px),
+        linear-gradient(180deg,#ecd9b6,#d8bf95);}
+  .aspen{background:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 74px),
        repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 34px),
-       linear-gradient(180deg,#cdc1ad,#a99a83);}
+       linear-gradient(180deg,#cdc8c0,#a9a39a);}
   .floor .name{font-weight:800;font-size:14px;margin:9px 0 2px;}
   .floor .spec{font-size:12px;color:var(--muted);line-height:1.45;}
 
@@ -180,29 +180,29 @@
 
     <!-- ===================== FEATURED FLOORS · CASE (moved above the stats) ===================== -->
     <div class="sec">
-      <p class="kicker">Featured Floors · CASE Floors</p>
-      <h2>New on the floor this quarter</h2>
+      <p class="kicker">Featured Floors · CASE Signature Line</p>
+      <h2>New this quarter: the Signature line — 6.5&Prime; · 24-mil</h2>
       <div class="floors">
         <div class="floor">
           <!-- SWAP: real CASE product photo -->
-          <div class="swatch ash"><span class="new">New</span><span class="pill">Aspen</span></div>
+          <div class="swatch moak"><span class="new">New</span><span class="pill">Medium Oak</span></div>
+          <div class="name">Medium Oak</div>
+          <div class="spec">Signature line · 6.5&Prime; wide · 24-mil wear layer</div>
+        </div>
+        <div class="floor">
+          <div class="swatch sand"><span class="new">New</span><span class="pill">Desert Sand</span></div>
+          <div class="name">Desert Sand</div>
+          <div class="spec">Signature line · 6.5&Prime; wide · 24-mil wear layer</div>
+        </div>
+        <div class="floor">
+          <div class="swatch aspen"><span class="pill">Aspen</span></div>
           <div class="name">Aspen</div>
-          <div class="spec">Cool gray with bold character markings · waterproof SPC core</div>
-        </div>
-        <div class="floor">
-          <div class="swatch oak"><span class="new">New</span><span class="pill">Light Oak</span></div>
-          <div class="name">Light Oak</div>
-          <div class="spec">Classic blonde oak · timeless &amp; refined · click-lock</div>
-        </div>
-        <div class="floor">
-          <div class="swatch hick"><span class="pill">Bark</span></div>
-          <div class="name">Bark</div>
-          <div class="spec">Rich chocolate-brown · natural plank-to-plank variation</div>
+          <div class="spec">Cool gray, bold character markings · waterproof SPC</div>
         </div>
       </div>
-      <p class="source">Real CASE Floors designs · waterproof · click-lock · limited lifetime warranty ·
+      <p class="source">CASE <b>Signature line</b> (6.5&Prime; plank, 24-mil wear layer) · waterproof · click-lock · limited lifetime warranty ·
       <a href="https://www.casefloors.com/flooring-gallery" style="color:var(--accent-dark);font-weight:700;">browse the full gallery →</a><br>
-      <span style="color:#9a9286;">Swatches are color stand-ins — real CASE product photos drop in before send.</span></p>
+      <span style="color:#9a9286;">Swatches are color stand-ins — Eric's real Signature-line photos drop in before send.</span></p>
     </div>
 
     <!-- ===================== FEATURING CASE FLOORS ===================== -->
@@ -283,13 +283,31 @@
     <!-- ===================== OFF-MARKET / WHOLESALE WATCH ===================== -->
     <div class="sec">
       <p class="kicker">Off-Market Real Estate Trends</p>
-      <div class="note">
-        <span class="tag">Preview · data source TBD</span>
-        <p><b>Coming next issue:</b> a snapshot of investor activity across Duval, Clay &amp; St.
-        Johns — cash-sale share, absentee-owner purchases, and foreclosure/auction volume (the
-        closest public read on off-MLS flip activity). We're locking in the data source — county
-        records or an investor-data tool — before we publish any numbers. <b>No guesses here.</b></p>
+      <h2>Where the investors &amp; flippers are buying</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="label">All-Cash Share</div>
+          <div class="num">39.3%</div>
+          <div class="delta up">▲ #1 in the U.S. (tied)</div>
+        </div>
+        <div class="stat">
+          <div class="label">Investor / Cash Buyers</div>
+          <div class="num">~28%</div>
+          <div class="delta up">▲ vs. ~19% historically</div>
+        </div>
+        <div class="stat">
+          <div class="label">Avg. Flip Gross Margin</div>
+          <div class="num">~27%</div>
+          <div class="delta flat">metro avg (ATTOM)</div>
+        </div>
+        <div class="stat">
+          <div class="label">Hot Flip ZIPs · sub-$200k</div>
+          <div class="num" style="font-size:17px;line-height:1.35;">32210 · 32218 · 32206</div>
+          <div class="delta flat">Westside · Northside · Springfield</div>
+        </div>
       </div>
+      <p class="source">Sources: Redfin all-cash share (Feb 2026) · ATTOM Home Flipping Report · local investor-market analyses · Duval County Clerk foreclosure auctions. See docs/data-sources.md.</p>
+      <p style="font-size:14px;line-height:1.6;color:#2b2b2b;margin:4px 0 0;"><b>Translation:</b> nearly <b>4 in 10</b> Jacksonville homes sell all-cash — investors and flippers who need flooring on a deadline. The sub-$200k Westside/Northside deals are flip central. Stock up before your next close.</p>
     </div>
 
     <!-- ===================== PROMOTION (LVP Warehouse brand ONLY — no CASE) ===================== -->
@@ -303,14 +321,19 @@
       </div>
     </div>
 
-    <!-- ===================== SPONSOR SLOT ===================== -->
+    <!-- ===================== SPONSOR SLOT (example: OpenNova) ===================== -->
     <div class="sec">
-      <div class="sponsor">
-        <div class="lab">This issue sponsored by</div>
-        <div class="ph">[ Your Business Here ]</div>
-        <p class="pitch">SAMPLE — Reach 380+ (and growing) Northeast Florida investors, flippers &amp;
-        contractors. Ask Eric about sponsoring the next issue.</p>
+      <div style="background:#0e1230;border-radius:14px;padding:22px;text-align:center;">
+        <div style="font-size:10px;letter-spacing:2px;color:#9aa3c7;font-weight:800;">THIS ISSUE SPONSORED BY</div>
+        <div style="margin:10px 0 2px;">
+          <svg width="32" height="32" viewBox="0 0 40 40" style="vertical-align:middle;"><path d="M20 2 L23.5 15.5 L37 19.5 L23.5 23.5 L20 38 L16.5 23.5 L3 19.5 L16.5 15.5 Z" fill="#8b9bff"/></svg>
+          <span style="font-size:26px;font-weight:900;letter-spacing:.4px;color:#fff;vertical-align:middle;margin-left:7px;">OpenNova</span>
+        </div>
+        <div style="font-size:13px;color:#c7ccea;">AI automation &amp; websites for local business.</div>
+        <div style="font-size:14px;color:#fff;margin-top:8px;">Newsletters, lead-gen, and a site that works while you sleep — built and run for you.</div>
+        <a href="#" style="display:inline-block;margin-top:14px;background:#6c7bff;color:#fff;font-weight:800;text-decoration:none;padding:10px 20px;border-radius:9px;font-size:14px;">See what we can build →</a>
       </div>
+      <p class="source" style="text-align:center;">Example sponsor placement (OpenNova) — this is how a sponsor's spot appears. Reach 380+ NE-FL investors, flippers &amp; contractors.</p>
     </div>
 
     <!-- ===================== CTA ===================== -->
