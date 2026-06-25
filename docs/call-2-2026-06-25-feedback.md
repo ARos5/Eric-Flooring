@@ -41,7 +41,7 @@ what's now implemented vs. still open. Companion to `call-transcript-2026-06-25.
   **Off-Market Real Estate Trends** only when a real source is chosen. No fabricated numbers.
 
 ## New opportunity — GC website (separate project)
-- Eric's buddy **"Jane Remodeling Inc"** — general contractor / flooring installer, **no website**
+- Eric's buddy **Jade Remodeling** — general contractor / flooring installer, **no website**
   (maybe no Facebook). Alex's play: light research → send a **website mockup** (like Eric's), then
   reach out (Eric referred). Doubles as a **newsletter sponsor** prospect.
 - Eric is texting the business card. **Next step:** build the GC site mockup once card details are
