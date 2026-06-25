@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--
+  THE LVP WAREHOUSE — JACKSONVILLE · Newsletter mockup (v1)
+  =========================================================
+  Purpose: look-and-feel demo for Eric. Open in a browser or on a phone.
+
+  HOW TO SWAP IN REAL ASSETS (search for "SWAP:"):
+    • SWAP: logo            -> replace the inline <svg class="logo"> with Eric's logo <img>
+    • SWAP: brand colors    -> edit the CSS variables in :root below
+    • SWAP: floor photos    -> replace the .swatch divs with <img> of real designs
+    • SWAP: contact details  -> phone, address, email in the CTA + footer
+  All numbers in "Market Pulse" are REAL (sourced, see docs/data-sources.md).
+  Items marked "SAMPLE" are placeholders to be replaced before a real send.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<title>The LVP Warehouse — Jacksonville</title>
+<style>
+  :root{
+    /* SWAP: brand colors — edit these to match Eric's final brand */
+    --ink:#161616;        /* near-black, from the B&W logo */
+    --paper:#ffffff;
+    --bg:#e7e2db;         /* warm gray page background */
+    --panel:#f5f2ee;      /* light warm panel */
+    --line:#e0dad1;
+    --muted:#6c665e;
+    --accent:#e8821e;     /* bolder "warehouse" amber — data + CTAs */
+    --accent-dark:#c2670f;
+    --up:#2e7d52;         /* stat rising */
+    --down:#c2453b;       /* stat falling */
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;padding:0;background:var(--bg);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+       color:var(--ink);-webkit-font-smoothing:antialiased;}
+  a{color:var(--accent-dark);}
+  .preheader{display:none!important;visibility:hidden;opacity:0;height:0;width:0;overflow:hidden;}
+  .mockbar{background:#222;color:#ffd9a8;font-size:12px;text-align:center;
+           padding:8px 14px;letter-spacing:.3px;}
+  .mockbar b{color:#fff;}
+  .wrap{max-width:600px;margin:0 auto;padding:18px 12px 40px;}
+  .card{background:var(--paper);border-radius:14px;overflow:hidden;
+        box-shadow:0 8px 30px rgba(0,0,0,.10);}
+
+  /* Header */
+  .head{background:var(--ink);color:#fff;padding:26px 26px 22px;text-align:center;}
+  .logo{width:148px;height:auto;color:#fff;display:inline-block;}
+  .head .place{margin-top:6px;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#cfc9c0;}
+  .issue{margin-top:16px;display:inline-block;background:var(--accent);color:#1a1205;
+         font-weight:800;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;
+         padding:6px 14px;border-radius:999px;}
+
+  /* Generic section */
+  .sec{padding:26px 26px 8px;}
+  .kicker{color:var(--accent-dark);font-weight:800;font-size:12px;letter-spacing:1.6px;
+          text-transform:uppercase;margin:0 0 6px;}
+  h2{font-size:22px;margin:0 0 12px;line-height:1.2;}
+  p{font-size:15px;line-height:1.6;color:#2b2b2b;margin:0 0 14px;}
+  .lede{font-size:15px;}
+  .sig{font-weight:700;margin-top:2px;}
+
+  /* Market pulse stat grid */
+  .stats{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 8px;}
+  .stat{flex:1 1 30%;min-width:150px;background:var(--panel);border:1px solid var(--line);
+        border-radius:10px;padding:13px 14px;}
+  .stat .label{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .stat .num{font-size:24px;font-weight:800;line-height:1.1;}
+  .stat .delta{font-size:12px;font-weight:700;margin-top:3px;}
+  .delta.up{color:var(--up);} .delta.down{color:var(--down);} .delta.flat{color:var(--muted);}
+  .source{font-size:11px;color:var(--muted);margin:10px 0 2px;}
+
+  .takeaway{background:#1c1c1c;color:#f3efe9;border-radius:12px;padding:18px 18px;margin:8px 0 4px;}
+  .takeaway .kicker{color:var(--accent);}
+  .takeaway p{color:#f0ece5;margin:0;}
+
+  /* Off-market callout */
+  .note{border-left:4px solid var(--accent);background:var(--panel);
+        border-radius:0 10px 10px 0;padding:14px 16px;margin:4px 0;}
+  .note .tag{display:inline-block;background:#ddd3c6;color:#5b5347;font-size:10px;font-weight:800;
+             letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:8px;}
+  .note p{margin:0;font-size:14px;}
+
+  /* Featured floors */
+  .floors{display:flex;flex-wrap:wrap;gap:12px;}
+  .floor{flex:1 1 30%;min-width:150px;}
+  .swatch{height:104px;border-radius:9px;position:relative;border:1px solid rgba(0,0,0,.08);
+          box-shadow:inset 0 0 0 1px rgba(255,255,255,.15);}
+  .swatch .pill{position:absolute;left:8px;bottom:8px;background:rgba(20,20,20,.82);color:#fff;
+                font-size:11px;font-weight:700;letter-spacing:.4px;padding:4px 8px;border-radius:6px;}
+  .swatch .new{position:absolute;right:8px;top:8px;background:var(--accent);color:#1a1205;
+               font-size:10px;font-weight:800;letter-spacing:.5px;padding:3px 7px;border-radius:5px;text-transform:uppercase;}
+  /* SWAP: floor photos — these CSS swatches stand in for real product photography */
+  .oak{background:repeating-linear-gradient(90deg,rgba(0,0,0,.07) 0 1px,transparent 1px 70px),
+       repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 34px),
+       linear-gradient(180deg,#e8cfa6,#d6b184);}
+  .hick{background:repeating-linear-gradient(90deg,rgba(0,0,0,.14) 0 1px,transparent 1px 66px),
+        repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 34px),
+        linear-gradient(180deg,#7d5536,#5d3d27);}
+  .ash{background:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 74px),
+       repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 34px),
+       linear-gradient(180deg,#c6bbab,#aa9c8a);}
+  .floor .name{font-weight:800;font-size:14px;margin:9px 0 2px;}
+  .floor .spec{font-size:12px;color:var(--muted);line-height:1.45;}
+
+  /* Promo */
+  .promo{background:var(--ink);color:#fff;border-radius:14px;padding:22px;text-align:center;
+         border:2px solid var(--accent);}
+  .promo .eyebrow{color:var(--accent);font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase;}
+  .promo .big{font-size:30px;font-weight:900;margin:8px 0 2px;line-height:1.05;}
+  .promo .big span{color:var(--accent);}
+  .promo .sub{font-size:13px;color:#d8d2c8;margin:6px 0 0;}
+  .promo .fine{font-size:12px;color:#a59e93;margin:14px 0 0;border-top:1px solid #333;padding-top:12px;}
+
+  /* Sponsor slot */
+  .sponsor{border:2px dashed #cfc6b8;border-radius:12px;padding:18px;text-align:center;background:#faf8f4;}
+  .sponsor .lab{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:800;}
+  .sponsor .ph{font-size:19px;font-weight:800;color:#9a9286;margin:8px 0 6px;}
+  .sponsor .pitch{font-size:13px;color:var(--muted);margin:0;}
+
+  /* CTA */
+  .cta{text-align:center;padding:6px 26px 2px;}
+  .btn{display:inline-block;background:var(--accent);color:#1a1205;font-weight:800;font-size:16px;
+       text-decoration:none;padding:14px 30px;border-radius:10px;letter-spacing:.3px;}
+  .cta .alt{display:block;margin-top:12px;font-size:14px;color:var(--muted);}
+
+  /* Footer */
+  .foot{padding:24px 26px 30px;text-align:center;color:var(--muted);font-size:12px;line-height:1.6;}
+  .foot .biz{font-weight:800;color:var(--ink);font-size:13px;letter-spacing:.5px;}
+  .foot a{color:var(--muted);}
+  .divider{height:1px;background:var(--line);margin:18px 26px 0;}
+
+  @media (max-width:520px){
+    .stat{flex:1 1 46%;min-width:0;}
+    .floor{flex:1 1 46%;}
+    .promo .big{font-size:25px;}
+    h2{font-size:20px;}
+  }
+</style>
+</head>
+<body>
+<!-- preheader: the gray preview text email clients show next to the subject -->
+<span class="preheader">Northeast FL market pulse + new floors + investor flip special from $1.49/sq ft.</span>
+
+<div class="mockbar">MOCKUP — <b>The LVP Warehouse</b> newsletter · market data is real (NEFAR/Freddie Mac); items marked <b>SAMPLE</b> are placeholders</div>
+
+<div class="wrap">
+  <div class="card">
+
+    <!-- ===================== HEADER ===================== -->
+    <div class="head">
+      <!-- SWAP: logo — replace this whole <svg> with Eric's real logo image -->
+      <svg class="logo" viewBox="0 0 220 172" role="img" aria-label="The LVP Warehouse">
+        <polygon points="30,152 30,72 110,20 190,72 190,152" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M164,55 L164,34 L177,34 L177,63" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+        <text x="110" y="60" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="4" fill="currentColor">THE</text>
+        <text x="110" y="107" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="800" font-size="56" fill="currentColor">LVP</text>
+        <text x="110" y="129" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="2.5" fill="currentColor">WAREHOUSE</text>
+        <g fill="currentColor">
+          <rect x="50" y="137" width="33" height="8"/><rect x="87" y="137" width="19" height="8"/>
+          <rect x="110" y="137" width="33" height="8"/><rect x="147" y="137" width="23" height="8"/>
+          <rect x="42" y="148" width="21" height="8"/><rect x="67" y="148" width="33" height="8"/>
+          <rect x="104" y="148" width="25" height="8"/><rect x="133" y="148" width="33" height="8"/>
+        </g>
+      </svg>
+      <div class="place">Jacksonville</div>
+      <div class="issue">Q3 2026 · Northeast Florida</div>
+    </div>
+
+    <!-- ===================== INTRO (voiced as Eric) ===================== -->
+    <div class="sec">
+      <p class="lede">Hey — Eric here at The LVP Warehouse. Every quarter I send the people I work
+      with a quick read on the Northeast Florida market, plus what's new on my floor. If you've got
+      a flip closing soon, this one's for you. Let's get into it. 👇</p>
+      <p class="sig">— Eric Borrelli, The LVP Warehouse · Jacksonville</p>
+    </div>
+
+    <!-- ===================== MARKET PULSE ===================== -->
+    <div class="sec">
+      <p class="kicker">Northeast Florida Market Pulse</p>
+      <h2>Where the market sits this quarter</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="label">Median Sale Price</div>
+          <div class="num">$410,000</div>
+          <div class="delta up">▲ 6.1% vs. last year</div>
+        </div>
+        <div class="stat">
+          <div class="label">Closed Sales (May)</div>
+          <div class="num">1,969</div>
+          <div class="delta up">▲ 2.9% vs. April</div>
+        </div>
+        <div class="stat">
+          <div class="label">Active Inventory</div>
+          <div class="num">7,109</div>
+          <div class="delta down">▼ 15.1% vs. last year</div>
+        </div>
+        <div class="stat">
+          <div class="label">Median Days on Market</div>
+          <div class="num">~50</div>
+          <div class="delta flat">balanced, ~4 mo. supply</div>
+        </div>
+        <div class="stat">
+          <div class="label">30-yr Fixed Mortgage</div>
+          <div class="num">6.5%</div>
+          <div class="delta flat">holding mid-6s</div>
+        </div>
+        <div class="stat">
+          <div class="label">Sold Over List Price</div>
+          <div class="num">14.1%</div>
+          <div class="delta up">▲ from 11.3% a year ago</div>
+        </div>
+      </div>
+      <p class="source">Sources: Northeast Florida Association of REALTORS® (NEFAR), May 2026 report (6-county region: Baker, Clay, Duval, Nassau, Putnam, St. Johns) · Freddie Mac PMMS, June 2026. See docs/data-sources.md.</p>
+
+      <div class="takeaway">
+        <p class="kicker">What this means for flippers</p>
+        <p>Inventory is down ~15% year-over-year and homes are still moving — but with rates near
+        6.5%, buyers are picky and rewarding <b>finished quality</b>, not just the lowest price.
+        Translation: the renovated-to-sell projects win, and flooring is the first thing a buyer
+        notices walking in. Lock your materials before your next close so the install doesn't hold
+        up your timeline.</p>
+      </div>
+    </div>
+
+    <!-- ===================== OFF-MARKET / WHOLESALE WATCH ===================== -->
+    <div class="sec">
+      <p class="kicker">Off-Market &amp; Wholesale Watch</p>
+      <div class="note">
+        <span class="tag">Sample · live tracker coming</span>
+        <p>Investor and off-MLS activity stayed steady across Duval &amp; Clay this quarter, with
+        wholesale assignment deals clustering in the <b>$150k–$250k</b> range — prime flip territory.
+        We're wiring up a live off-market tracker; next issue this section carries real, sourced
+        numbers for your buy box.</p>
+      </div>
+    </div>
+
+    <!-- ===================== FEATURED FLOORS ===================== -->
+    <div class="sec">
+      <p class="kicker">Featured Floors</p>
+      <h2>New on the floor this quarter</h2>
+      <div class="floors">
+        <div class="floor">
+          <!-- SWAP: floor photo -->
+          <div class="swatch oak"><span class="new">New</span><span class="pill">Coastal Oak</span></div>
+          <div class="name">Coastal Oak</div>
+          <div class="spec">7" wide plank · 20-mil wear layer · waterproof SPC core</div>
+        </div>
+        <div class="floor">
+          <div class="swatch hick"><span class="new">New</span><span class="pill">Smoked Hickory</span></div>
+          <div class="name">Smoked Hickory</div>
+          <div class="spec">9" wide · embossed (EIR) texture · 22-mil · rigid core</div>
+        </div>
+        <div class="floor">
+          <div class="swatch ash"><span class="pill">Greige Ash</span></div>
+          <div class="name">Greige Ash</div>
+          <div class="spec">7" wide · light-commercial rated · 20-mil · attached pad</div>
+        </div>
+      </div>
+      <p class="source">SAMPLE designs &amp; specs — swap in Eric's real product photos and names.</p>
+    </div>
+
+    <!-- ===================== PROMOTION (LVP Warehouse brand ONLY — no CASE) ===================== -->
+    <div class="sec">
+      <div class="promo">
+        <div class="eyebrow">Investor Flip Special</div>
+        <div class="big">Premium LVP from <span>$1.49</span>/sq ft</div>
+        <div class="sub">Two designs · pallet pricing (~1,300 sq ft) · order today, pick up in 48 hours.</div>
+        <div class="fine">Building a relationship? Our full line runs <b>$1.69/sq ft</b> for repeat
+        buyers. Volume orders — let's talk numbers. Pickup only · paid at order.</div>
+      </div>
+    </div>
+
+    <!-- ===================== SPONSOR SLOT ===================== -->
+    <div class="sec">
+      <div class="sponsor">
+        <div class="lab">This issue sponsored by</div>
+        <div class="ph">[ Your Business Here ]</div>
+        <p class="pitch">SAMPLE — Reach 100+ Northeast Florida investors, flippers &amp; contractors.
+        Ask Eric about sponsoring the next issue.</p>
+      </div>
+    </div>
+
+    <!-- ===================== CTA ===================== -->
+    <div class="cta">
+      <!-- SWAP: contact — real phone/booking link -->
+      <a class="btn" href="tel:+1904XXXXXXX">Reserve a Pallet → Call/Text (904) XXX-XXXX</a>
+      <span class="alt">Or reply to this email to book a free sample visit. <em>(SAMPLE contact)</em></span>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <div class="foot">
+      <div class="biz">THE LVP WAREHOUSE · JACKSONVILLE, FL</div>
+      <!-- SWAP: real street address (required for marketing email) -->
+      [Street address], Jacksonville, FL 322XX <span style="color:#bbb">· SAMPLE</span><br>
+      <a href="mailto:LVPJacksonville@gmail.com">LVPJacksonville@gmail.com</a> · (904)&nbsp;XXX-XXXX<br>
+      Follow us: <a href="#">Case Floors</a> (Facebook &amp; Instagram)
+      <br><br>
+      You're receiving this because you've purchased from or inquired with The LVP Warehouse.<br>
+      <a href="#unsubscribe">Unsubscribe</a> · <a href="#preferences">Update preferences</a>
+    </div>
+
+  </div>
+  <p style="text-align:center;color:#9a9286;font-size:11px;margin:16px 8px 0;">
+    Built as a v1 look-and-feel mockup · The LVP Warehouse · Jacksonville</p>
+</div>
+</body>
+</html>
